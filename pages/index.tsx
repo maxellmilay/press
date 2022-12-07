@@ -1,12 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Grid, Typography } from '@mui/material'
+import { Grid, Typography, useMediaQuery } from '@mui/material'
+import Exercises from '../components/Exercises'
 
 export default function Home() {
+  const matches = useMediaQuery('(min-width:900px)')
+
   return (
     <Grid container justifyContent='center' sx={{ width: '100%', minHeight: '100vh', backgroundColor: '#FFD9D9', color: '#2B3A55', fontWeight: 'bold' }}>
-      <Grid container item direction="column" sx={{ width: '60%', minHeight: '100vh', backgroundColor: '#F0B6B6' }}>
+      <Grid container item direction="column" sx={{ width: matches ? '60%' : '100%', minHeight: '100vh', backgroundColor: '#F0B6B6' }}>
         <Head>
           <title>Press</title>
         </Head>
@@ -30,6 +33,7 @@ export default function Home() {
         <Grid container item justifyContent='center' alignItems='center' sx={{ backgroundColor: '#EB9595' }}>
           <Typography variant='h4' sx={{ margin: '1.25rem 0' }}>Chest Exercises</Typography>
         </Grid>
+        <Exercises />
       </Grid>
     </Grid>
 
