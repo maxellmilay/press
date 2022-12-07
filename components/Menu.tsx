@@ -1,13 +1,20 @@
 import React from 'react'
-import { Grid, Typography, Button } from '@mui/material'
+import { Grid, Typography, Button, useMediaQuery } from '@mui/material'
 import muscles from '../constants/muscles'
 import MenuItem from './MenuItem'
 
-export default function Menu() {
+interface PropsInterface {
+    setCurrentMuscle: (muscle: string) => void
+}
+
+export default function Menu(props: PropsInterface) {
+    const { setCurrentMuscle } = props
+    const matches = useMediaQuery('(min-width:900px)')
+
     return (
-        <Grid container item justifyContent='center' sx={{ backgroundColor: '#CE7777' }}>
+        <Grid container item direction={matches ? "row" : "column"} justifyContent='center' sx={{ backgroundColor: '#CE7777' }}>
             {muscles.map((muscle) => {
-                return <MenuItem key={muscle} muscle={muscle} />
+                return <MenuItem key={muscle} muscle={muscle} setCurrentMuscle={setCurrentMuscle}/>
             })}
         </Grid>
     )
