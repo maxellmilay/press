@@ -19,7 +19,7 @@ export default function Exercises() {
                 return (
                     <ExerciseContainer container item key={exercise.name} direction={matches ? "row" : 'column'}>
                         <Grid container item justifyContent='center' alignItems='center' md={8} wrap sx={{ marginBottom: matches ? '0' : '0.5rem' }}>
-                            <CircleIcon sx={{ color: '#CE7777', fontSize: '5rem' }} />
+                            <CircleIcon sx={{ color: '#CE7777', fontSize: '5rem', marginRight: '1rem' }} />
                             <Grid container item direction="column" justifyContent="center" sx={{ flexGrow: '1' }}>
                                 <Typography variant="h5">{exercise.name}</Typography>
                                 <Typography>{exercise.muscle}</Typography>

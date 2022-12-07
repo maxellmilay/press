@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Grid, Typography, useMediaQuery } from '@mui/material'
+import { Grid, Typography, useMediaQuery, Button } from '@mui/material'
 import Exercises from '../components/Exercises'
+import Menu from '../components/Menu'
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Home() {
   const matches = useMediaQuery('(min-width:900px)')
@@ -16,20 +18,16 @@ export default function Home() {
         <Grid container item justifyContent='center' sx={{ backgroundColor: '#FF9F9F' }}>
           <Typography variant='h3' sx={{ margin: '1.5rem 0' }}>Press</Typography>
         </Grid>
-        <Grid container item justifyContent='center' sx={{ backgroundColor: '#CE7777' }}>
-          <Grid container item md={3} justifyContent='center' alignItems='center'>
-            <Typography variant='h6' sx={{ margin: '1rem 0' }}>Chest</Typography>
-          </Grid>
-          <Grid container item md={3} justifyContent='center' alignItems='center'>
-            <Typography variant='h6' sx={{ margin: '1rem 0' }}>Arm</Typography>
-          </Grid>
-          <Grid container item md={3} justifyContent='center' alignItems='center'>
-            <Typography variant='h6' sx={{ margin: '1rem 0' }}>Back</Typography>
-          </Grid>
-          <Grid container item md={3} justifyContent='center' alignItems='center'>
-            <Typography variant='h6' sx={{ margin: '1rem 0' }}>Leg</Typography>
-          </Grid>
-        </Grid>
+        {matches
+          ? <Menu />
+          : <Button sx={{ padding: '0', backgroundColor: '#CE7777' }}>
+            <Grid container item justifyContent='center' sx={{ backgroundColor: '#CE7777' }}>
+              <Grid container item md={3} justifyContent='center' alignItems='center'>
+
+                <MenuIcon sx={{ margin: '1rem 0', fontSize: '2rem', color: '#2B3A55' }} />
+              </Grid>
+            </Grid>
+          </Button>}
         <Grid container item justifyContent='center' alignItems='center' sx={{ backgroundColor: '#EB9595' }}>
           <Typography variant='h4' sx={{ margin: '1.25rem 0' }}>Chest Exercises</Typography>
         </Grid>
