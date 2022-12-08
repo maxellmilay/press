@@ -31,7 +31,7 @@ export default function Exercises() {
                                     <Typography>Sets</Typography>
                                 </Grid>
                                 <Grid container item md={6} justifyContent="center">
-                                    <Typography variant="h3">{exercise.sets}</Typography>
+                                    <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{exercise.sets}</Typography>
                                 </Grid>
                             </Grid>
                             <Grid container item wrap>
@@ -40,7 +40,7 @@ export default function Exercises() {
 
                                 </Grid>
                                 <Grid container item md={6} justifyContent="center">
-                                    <Typography variant="h3">{exercise.repetition}</Typography>
+                                    <Typography variant="h3" sx={{ fontWeight: 'bold' }}>{exercise.repetition}</Typography>
                                 </Grid>
                             </Grid>
                         </Grid>

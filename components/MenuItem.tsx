@@ -16,7 +16,7 @@ export default function MenuItem(props: PropsInterface) {
     return (
         <Grid container item md={3} justifyContent='center' alignItems='center'>
             <Button sx={{ width: '100%', color: '#2B3A55' }} onClick={() => handleMuscleChange(muscle)}>
-                <Typography variant='h6' sx={{ margin: '1rem 0' }}>{muscle}</Typography>
+                <Typography variant='h6' sx={{ margin: '1rem 0', fontWeight: 'bold' }}>{muscle}</Typography>
             </Button>
         </Grid>
     )

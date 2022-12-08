@@ -19,10 +19,10 @@ export default function Home() {
     <Grid container justifyContent='center' sx={{ width: '100%', minHeight: '100vh', backgroundColor: '#FFD9D9', color: '#2B3A55', fontWeight: 'bold' }}>
       <Grid container item direction="column" sx={{ width: matches ? '60%' : '100%', minHeight: '100vh', backgroundColor: '#F0B6B6' }}>
         <Head>
-          <title>Press</title>
+          <title>pres</title>
         </Head>
-        <Grid container item justifyContent='center' sx={{ backgroundColor: '#FF9F9F' }}>
-          <Typography variant='h3' sx={{ margin: '1.5rem 0' }}>Press</Typography>
+        <Grid container item justifyContent='center' sx={{ backgrounsdColor: '#FF9F9F' }}>
+          <Typography variant='h3' sx={{ margin: '1.5rem 0' }}>Pres</Typography>
         </Grid>
         {matches
           ? <Menu setCurrentMuscle={setCurrentMuscle} />
