@@ -16,28 +16,28 @@ export default function Home() {
   }
 
   return (
-    <Grid container justifyContent='center' sx={{ width: '100%', minHeight: '100vh', backgroundColor: '#FFD9D9', color: '#2B3A55', fontWeight: 'bold' }}>
-      <Grid container item direction="column" sx={{ width: matches ? '60%' : '100%', minHeight: '100vh', backgroundColor: '#F0B6B6' }}>
+    <Grid container justifyContent='center' sx={{ width: '100%', minHeight: '100vh', backgroundColor: '#FFF2F2', color: '#2B3A55', fontWeight: 'bold' }}>
+      <Grid container item direction="column" sx={{ width: matches ? '60%' : '100%', minHeight: '100vh', backgroundColor: 'white' }}>
         <Head>
-          <title>pres</title>
+          <title>Press</title>
         </Head>
-        <Grid container item justifyContent='center' sx={{ backgrounsdColor: '#FF9F9F' }}>
+        <Grid container item justifyContent='center' sx={{ backgroundColor: 'white' }}>
           <Typography variant='h3' sx={{ margin: '1.5rem 0' }}>Pres</Typography>
         </Grid>
         {matches
           ? <Menu setCurrentMuscle={setCurrentMuscle} />
           : <>
-            <Button sx={{ padding: '0', backgroundColor: '#CE7777' }} onClick={toggleMenu}>
-              <Grid container item justifyContent='center' sx={{ backgroundColor: '#CE7777' }}>
+            <Button sx={{ padding: '0', backgroundColor: '#E3383B' }} onClick={toggleMenu}>
+              <Grid container item justifyContent='center' sx={{ backgroundColor: '#E3383B' }}>
                 <Grid container item md={3} justifyContent='center' alignItems='center'>
-                  <MenuIcon sx={{ margin: '1rem 0', fontSize: '2rem', color: '#2B3A55' }} />
+                  <MenuIcon sx={{ margin: '1rem 0', fontSize: '2rem', color: 'white' }} />
                 </Grid>
 
               </Grid>
             </Button>
             {open && <Menu setCurrentMuscle={setCurrentMuscle} />}
           </>}
-        <Grid container item justifyContent='center' alignItems='center' sx={{ backgroundColor: '#EB9595' }}>
+        <Grid container item justifyContent='center' alignItems='center' sx={{ backgroundColor: 'white' }}>
           <Typography variant='h4' sx={{ margin: '1.25rem 0' }}>{currentMuscle} Exercises</Typography>
         </Grid>
         <Exercises />

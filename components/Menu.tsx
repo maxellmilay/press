@@ -12,9 +12,9 @@ export default function Menu(props: PropsInterface) {
     const matches = useMediaQuery('(min-width:900px)')
 
     return (
-        <Grid container item direction={matches ? "row" : "column"} justifyContent='center' sx={{ backgroundColor: '#CE7777' }}>
+        <Grid container item direction={matches ? "row" : "column"} justifyContent='center' sx={{ backgroundColor: '#E3383B' }}>
             {muscles.map((muscle) => {
-                return <MenuItem key={muscle} muscle={muscle} setCurrentMuscle={setCurrentMuscle}/>
+                return <MenuItem key={muscle} muscle={muscle} setCurrentMuscle={setCurrentMuscle} />
             })}
         </Grid>
     )

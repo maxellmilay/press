@@ -6,7 +6,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 
 const ExerciseContainer = styled(Grid)(({ theme }) => ({
     padding: '2rem 1rem',
-    backgroundColor: '#FFF5F5',
+    backgroundColor: '#F4F4F4',
     marginTop: '1rem'
 }))
 
@@ -18,8 +18,11 @@ export default function Exercises() {
             {exercises.map((exercise) => {
                 return (
                     <ExerciseContainer container item key={exercise.name} direction={matches ? "row" : 'column'}>
-                        <Grid container item justifyContent='center' alignItems='center' md={8} wrap sx={{ marginBottom: matches ? '0' : '0.5rem' }}>
-                            <CircleIcon sx={{ color: '#CE7777', fontSize: '5rem', marginRight: '1rem' }} />
+                        <Grid container item alignItems='center' md={8} wrap sx={{ marginBottom: matches ? '0' : '0.5rem' }}>
+                            <Grid item container justifyContent='center' direction='column' alignItems='center' sx={{ backgroundColor: '#E3383B', borderRadius: '50%', marginRight: '1rem', width: '6rem', height: '5rem' }} >
+                                <Typography variant='h4' sx={{ color: 'white', lineHeight: '1', fontWeight: 'bold' }}>20</Typography>
+                                <Typography sx={{ color: 'white', lineHeight: '0.9' }}>lb</Typography>
+                            </Grid>
                             <Grid container item direction="column" justifyContent="center" sx={{ flexGrow: '1' }}>
                                 <Typography variant="h5">{exercise.name}</Typography>
                                 <Typography>{exercise.muscle}</Typography>
