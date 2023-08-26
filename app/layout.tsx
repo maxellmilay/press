@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,9 +16,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${inter.className} flex flex-col min-h-[100dvh]`}>
         <Header />
-        {children}
+        <main className="relative grow flex flex-col justify-center items-center">
+          {children}
+          <Sidebar />
+        </main>
       </body>
     </html>
   );
 }
+
 
